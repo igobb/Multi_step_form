@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './SelectPlan.scss';
-import {images} from "../constans";
+import {images} from "../../constans";
 
 function SelectPlan(props) {
 
@@ -10,8 +10,7 @@ function SelectPlan(props) {
     const handleSwitch = () => {
         yearlyBilling ? setYearlyBilling(false) : setYearlyBilling(true);
     }
-    console.log(isActive)
-    console.log(yearlyBilling)
+
     return (
         <div className="page__container">
             <div className="header">

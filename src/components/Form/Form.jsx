@@ -1,15 +1,14 @@
 import React, {useState} from 'react';
 import './Form.scss'
 
-import YourInfo from "./YourInfo";
-import SelectPlan from "./SelectPlan";
-import AddOns from "./AddOns";
-import Summary from "./Summary";
+import YourInfo from "../YourInfo/YourInfo";
+import SelectPlan from "../SelectPlan/SelectPlan";
+import AddOns from "../AddOns/AddOns";
+import Summary from "../Summary/Summary";
 
 function Form() {
 
     const [page, setPage] = useState(0);
-    const [formData, setFormData] = useState({});
 
     const pageDisplay = () => {
         if (page === 0) {
