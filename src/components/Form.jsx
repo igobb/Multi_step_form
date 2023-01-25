@@ -9,6 +9,7 @@ import Summary from "./Summary";
 function Form() {
 
     const [page, setPage] = useState(0);
+    const [formData, setFormData] = useState({});
 
     const pageDisplay = () => {
         if (page === 0) {

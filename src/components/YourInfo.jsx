@@ -3,7 +3,7 @@ import './YourInfo.scss';
 
 function YourInfo(props) {
     return (
-        <div className="your-info__container">
+        <div className="page__container">
             <div className="header">
                 <h1>Personal info</h1>
                 <p>Please provide your name, email address, and phone number.</p>

@@ -1,0 +1,91 @@
+.plan-options__container {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  padding: 1rem 0;
+
+  .plan-options__items {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    grid-gap: 5%;
+
+    .plan-options__item {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 1rem;
+      border: 1px solid var(--light-gray);
+      border-radius: 10px;
+
+      .item__img {
+        margin-bottom: 2rem;
+      }
+
+      .item__info {
+        line-height: 1.5rem;
+
+        h1 {
+          font-size: 1rem;
+        }
+
+        p {
+          margin-top: 0.2rem;
+          color: var(--cool-gray);
+        }
+
+        .p__yearly-billings {
+          color: var(--marine-blue)
+        }
+      }
+      
+      &:hover {
+        cursor: pointer;
+        border-color: var(--purplish-blue);
+      }
+    }
+  }
+
+  .plan-options__switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 2rem;
+    background-color: var(--magnolia);
+
+    input[type="checkbox"] {
+      position: relative;
+      width: 40px;
+      height: 20px;
+      -webkit-appearance: none;
+      background-color: var(--marine-blue);
+      outline: none;
+      border-radius: 20px;
+      box-shadow: inset 0 0 5px rgba(255,255,255,.2);
+    }
+
+    input[type="checkbox"]:before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      background-color: var(--white);
+      transform: scale(.6);
+      transition: .5s;
+    }
+
+    input:checked[type="checkbox"]:before {
+      left: 20px;
+    }
+
+    h1 {
+      font-size: 1rem;
+      margin: 0 1rem;
+    }
+  }
+}
