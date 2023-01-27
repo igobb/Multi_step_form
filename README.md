@@ -29,7 +29,7 @@ This is a multi-step form created for the purpose of developing front-end skills
 ## Setup
 To run this project, click this link:
 
-⭐ <a href="">Multi step form</a> ⭐
+⭐ <a href="https://igobb.github.io/Multi_step_form/">Multi step form</a> ⭐
 
 or follow these steps:
 
