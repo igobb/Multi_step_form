@@ -1,14 +1,30 @@
 .form__inputs {
   display: flex;
   flex-direction: column;
-  height: 80%;
+  height: 70%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: 425px) {
+    padding: 1rem 0rem;
+    background-color: var(--white);
+    border-radius: 0 0 10px 10px;
+  }
 
   label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     font-size: .95rem;
     font-weight: 500;
     letter-spacing: -1px;
+
+    .require-info {
+      color: var(--strawberry-red);
+    }
   }
 
   input {
@@ -16,6 +32,7 @@
     border-radius: 10px;
     font-weight: 700;
     border: 1px solid var(--light-gray);
+    -webkit-appearance: none;
 
     &:focus {
       border: 3px solid var(--purplish-blue);
@@ -24,6 +41,16 @@
     &:hover {
       cursor: grab;
     }
+  }
+
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+  
+  input[type="number"] {
+      -moz-appearance: textfield;
   }
 
   ::placeholder {

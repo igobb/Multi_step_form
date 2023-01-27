@@ -1,0 +1,116 @@
+.finishing__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+
+    @media screen and (max-width: 425px) {
+        margin-bottom: 1rem;
+    }
+
+    .finishing__panel {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 10px;
+        background-color: var(--light-gray);
+
+        .choosen-plan {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--cool-gray);
+
+            @media screen and (max-width: 425px) {
+                padding-bottom: .5rem;
+            }
+  
+
+            .plan-name {
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    font-size: 1rem;
+                    margin-bottom: .5rem;
+                }
+
+                p {
+                    color: var(--cool-gray);
+                    text-decoration: underline;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: var(--purplish-blue);
+                    }
+                }
+            }
+
+            .plan-price {
+                color: var(--marine-blue);
+                font-weight: 700;
+            }
+        }
+
+        .choosen-add-ons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .add-ons-name, .add-ons-price {
+                margin-top: .9rem;
+
+                p {
+                    margin-bottom: .8rem;
+                }
+            }
+
+            .add-ons-name p {
+                color: var(--cool-gray)
+            }
+
+            .add-ons-price p {
+                color: var(--marine-blue);
+            }
+        }
+    }
+
+    .finishing__summary {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1.5rem;
+
+        @media screen and (max-width: 425px) {
+            margin-top: 2rem;
+            padding: .5rem 1.5rem;
+        }
+
+
+        .summary-name {
+            color: var(--cool-gray);
+        }
+
+        .summary-price {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--purplish-blue);
+
+            @media screen and (max-width: 425px) {
+                font-size: 1.2rem;
+            }
+  
+        }
+    }
+
+    .finishinh__alert{
+        margin-top: 1rem;
+        color: var(--marine-blue);
+        text-align: center;
+    }
+}

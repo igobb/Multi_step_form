@@ -4,6 +4,10 @@
     justify-content: space-between;
     gap: 1rem;
 
+    @media screen and (max-width: 425px) {
+        margin: 1rem 0;
+    }
+
     .add-ons__item {
         display: flex;
         flex-direction: row;
@@ -47,10 +51,18 @@
             h1 {
                 font-size: 1rem;
                 margin-bottom: .5rem;
+
+                @media screen and (max-width: 425px) {
+                    margin-bottom: .3rem;
+                }
             }
             
             p {
                 color: var(--cool-gray);
+
+                @media screen and (max-width: 425px) {
+                    font-size: .8rem;
+                }
             }
         }
 

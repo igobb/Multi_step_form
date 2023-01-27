@@ -4,30 +4,59 @@
   align-items: center;
   width: 100%;
   height: 100%;
+
+  @media screen and (max-width: 425px) {
+    align-items: flex-start;
+  }
 }
 
 .form__container {
   display: flex;
   flex-direction: row;
-  width: 60%;
+  width: 80%;
+  max-width: 900px;
+  min-width: 500px;
   height: 60%;
+  min-height: 550px;
   padding: 1rem 0 1rem 1rem;
   background-color: var(--white);
   border-radius: 15px;
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    width: 90%;
+    min-width: auto;
+    min-height: auto;
+    height: auto;
+    padding: 0;
+  }
 
   .aside {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 30%;
-    max-width: 250px;
-    min-width: 150px;
+    width: 35%;
+    min-width: 210px;
     height: 100%;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem;
     background-image: url("../../assets/bg-sidebar-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
+
+    @media screen and (max-width: 425px) {
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 25%;
+      flex-direction: row;
+      justify-content: center;
+      background-image: url("../../assets/bg-sidebar-mobile.svg");
+      background-size: cover;
+      border-radius: 0;
+      padding: 0;
+    }
 
     div {
       display: flex;
@@ -36,14 +65,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         border: 1px solid var(--light-blue);
         border-radius: 50%;
         font-size: 1rem;
         font-weight: 700;
         color: var(--light-blue);
         margin: 0 1rem 2rem 0;
+
+        @media screen and (max-width: 425px) {
+          margin-top: 3rem;
+        }
+        
       }
 
       .info {
@@ -52,8 +86,12 @@
         text-transform: uppercase;
         letter-spacing: 1px;
 
+        @media screen and (max-width: 425px) {
+          display: none;
+        }
+
         h1 {
-          font-size: .7rem;
+          font-size: .8rem;
           font-weight: 400;
           letter-spacing: -1px;
           color: var(--cool-gray);
@@ -63,7 +101,7 @@
         p {
           font-weight: 700;
           color: var(--light-gray);
-          font-size: .7rem;
+          font-size: .9rem;
         }
       }
 
@@ -79,12 +117,31 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 2rem;
+    height: 100%;
+    padding-top: 2rem;
+
+    @media screen and (max-width: 425px) {
+      position: relative;
+      z-index: 2;
+      margin-top: 6.5rem;
+      padding: 0 2rem;
+      background-color: var(--white);
+      border-radius: 10px;
+    }
 
     .page__body {
       width: 100%;
       height: 80%;
       padding: 0 5rem;
+        
+      @media screen and (max-width: 768px) {
+        padding: 0 2rem;
+      }
+
+      @media screen and (max-width: 425px) {
+        padding: 0;
+        height: 100%;
+      }
     }
 
     .footer {
@@ -94,6 +151,19 @@
       width: 100%;
       height: 20%;
       padding: 1rem 5rem;
+
+      @media screen and (max-width: 768px) {
+        padding: 0 2rem;
+      }
+
+      @media screen and (max-width: 425px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 80px;
+        padding: 1rem 1rem;
+        background-color: var(--white);
+      }
 
 
       .button-next {
@@ -106,6 +176,7 @@
 
         &:hover {
           cursor: grab;
+          opacity: .8;
         }
       }
 
@@ -119,6 +190,7 @@
 
         &:hover {
           cursor: grab;
+          color: var(--marine-blue);
         }
       }
 
@@ -129,6 +201,10 @@
         background-color: var(--purplish-blue);
         color: var(--white);
         font-size: 1rem;
+
+        &:hover {
+          opacity: .8;
+        }
       }
     }
   }
@@ -137,14 +213,39 @@
 .page__container {
   width: 100%;
   height: 100%;
+
+  @media screen and (max-width: 425px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .header {
+  position: relative;
+  z-index: 2;
   width: 100%;
   height: 20%;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 425px) {
+    background-color: var(--white);
+    border-radius: 10px 10px 0 0;
+    padding: 1.5rem 0 0;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    @media screen and (max-width: 425px) {
+      font-size: 1.7rem;
+    }
+  }
 
   p {
     margin-top: 1rem;
     color: var(--cool-gray);
+
+    @media screen and (max-width: 425px) {
+      font-size: 1.1rem;
+    }
   }
 }
